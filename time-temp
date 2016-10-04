@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-xs-4"><span style="color: blue; font-size: 28pt">{{itemValue('ntp_ntp_local_dateTime') | date:'HH:mm'}}</span></div>
+  <div class="col-xs-4"><span><widget-icon iconset="'smarthome-set'" icon="'temperature'" /></span>Temperature</div>
+  <div class="col-xs-4"><span><widget-icon iconset="'smarthome-set'" icon="'drop'" /></span>Humidity</div>
+</div>
+
+<div class="row">
+  <div class="col-xs-4"><span style="font-size: 18pt">Outside</div>
+  <div class="col-xs-4"><span style="color: red; font-size: 28pt">{{itemValue('Temperature_F') | number:0}}°F</span></div>
+  <div class="col-xs-4"><span style="color: cyan; font-size: 28pt">{{itemValue('Humidity') | number:0}}%</span></div>
+</div>
+
+<div class="row">
+  <div class="col-xs-4"><span style="font-size: 18pt">Inside</div>
+  <div class="col-xs-4"><span style="color: red; font-size: 28pt">{{itemValue('hallwayTemperature') | number:0}}°F</span></div>
+  <div class="col-xs-4"><span style="color: cyan; font-size: 28pt">{{itemValue('hallwayHumidity') | number:0}}%</span></div>
+</div>
+
+<table class="table">
+  <tr>
+    <td class="text-right">Sunrise:</td>
+    <td><strong>{{itemValue('astro_sun_local_rise_start') | date:'HH:mm'}}</strong></td>
+	<td></td>
+    <td class="text-right">Season:</td>
+    <td><strong>{{itemValue('astro_sun_local_season_name')}}</strong></td>
+  </tr>
+  <tr>
+    <td class="text-right">Sunset:</td>
+    <td><strong>{{itemValue('astro_sun_local_set_start') | date:'HH:mm'}}</strong></td>
+	<td></td>
+	<td class="text-right">Zodiac:</td>
+    <td><strong>{{itemValue('astro_sun_local_zodiac_sign')}}</strong></td>
+  </tr>
+  <tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  </tr>
+</table>
