@@ -1,0 +1,26 @@
+<div style="background: rgba(0,0,0,0.5);
+            margin-top: 0px;
+            margin-left: 0px;
+            border-radius: 3px;
+            border: 1px;
+            border-style: solid;
+            border-color: rgb(100,100,100) ;
+            width:105px; height: 105px;
+            ">
+	<div class="row" style="height: 20px" ></div>
+  
+	<div class="row">  
+  		<div ng-init='model={"name": "Kitchen", "item": "Dimmer_Kitchen", "hidelabel": true, "hideonoff": true, "iconset": "smarthome-set","icon": "bulb","icon_size": "40" }'>   
+    		<widget-switch   ng-model="model" />
+  		</div>
+	</div>
+	<div class="row" style="
+  		  font-size: 14pt;
+  		  font-family: Roboto, Helvetica, sans-serif;
+                  text-align: center;            
+  		  margin-top: 20px;
+                  margin-left: 0px;
+                  margin-right: 0px         
+                        ">Kitchen
+</div>
+</div>
