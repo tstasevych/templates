@@ -52,14 +52,14 @@
 	</tr>
 	<tr>
 		<td class="col-xs-4" style="color:red">Max</td>
-		<td class="col-xs-4" style="color:red">{{'%.0f' | sprintf:itemValue('Temp_Max0')}} °C</td>
-		<td class="col-xs-4" style="color:red">{{'%.0f' | sprintf:itemValue('Temp_Max1')}} °C</td>
-		<td class="col-xs-4" style="color:red">{{'%.0f' | sprintf:itemValue('Temp_Max2')}} °C</td>
+		<td class="col-xs-4" style="color:red">{{'%.0f' | sprintf:itemValue('Temp_Max0')}} °F</td>
+		<td class="col-xs-4" style="color:red">{{'%.0f' | sprintf:itemValue('Temp_Max1')}} °F</td>
+		<td class="col-xs-4" style="color:red">{{'%.0f' | sprintf:itemValue('Temp_Max2')}} °F</td>
 	</tr>
 	<tr>
 		<td class="col-xs-4" style="color:#0db9f0">Min</td>
-		<td class="col-xs-4" style="color:#0db9f0">{{'%.0f' | sprintf:itemValue('Temp_Min0')}} °C</td>
-		<td class="col-xs-4" style="color:#0db9f0">{{'%.0f' | sprintf:itemValue('Temp_Min1')}} °C</td>
-		<td class="col-xs-4" style="color:#0db9f0">{{'%.0f' | sprintf:itemValue('Temp_Min2')}} °C</td>
+		<td class="col-xs-4" style="color:#0db9f0">{{'%.0f' | sprintf:itemValue('Temp_Min0')}} °F</td>
+		<td class="col-xs-4" style="color:#0db9f0">{{'%.0f' | sprintf:itemValue('Temp_Min1')}} °F</td>
+		<td class="col-xs-4" style="color:#0db9f0">{{'%.0f' | sprintf:itemValue('Temp_Min2')}} °F</td>
 	</tr>
 </table>
