@@ -1,0 +1,29 @@
+<p>Today is {{itemValue('ntp_ntp_local_dateTime') | date:'EEEE'}}</p>
+
+<div ng-if="itemValue('ntp_ntp_local_dateTime') | date:'EEEE' | lowercase =='sunday'">
+  	<p> Football Sunday! GO BEARS! </p>
+</div>
+
+
+<div ng-if="itemValue('ntp_ntp_local_dateTime') | date:'EEEE' | lowercase == 'wednesday'">
+  	<p> Hump Day! </p>
+</div>
+
+<div ng-if="itemValue('ntp_ntp_local_dateTime') | date:'EEEE' | lowercase == 'thursday'">
+  <div ng-if="itemValue('ntp_ntp_local_dateTime') | date:'hh' | number:0 < 17">
+  	<p> Almost weekend! </p>
+  </div>
+  <div ng-if="itemValue('ntp_ntp_local_dateTime') | date:'hh', number:0 > 17">
+  	<p> Don't forget to take out garbage! </p>
+  </div>
+</div>
+
+
+<div ng-if="itemValue('ntp_ntp_local_dateTime') | date:'EEEE' | lowercase == 'friday'">
+  <div ng-if="itemValue('ntp_ntp_local_dateTime') | date:'hh' | number:0 < 6">
+  	<p> Don't forget to take out garbage! </p>
+  </div>
+  <div ng-if="itemValue('ntp_ntp_local_dateTime') | date:'hh', number:0 > 6">
+  	<p> TGIF! Enjoy the weekend! </p>
+  </div>
+</div>
