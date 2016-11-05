@@ -1,29 +1,49 @@
 <p>Today is {{itemValue('ntp_ntp_local_dateTime') | date:'EEEE'}}</p>
 
-<div ng-if="itemValue('ntp_ntp_local_dateTime') | date:'EEEE' | lowercase =='sunday'">
-  	<p> Football Sunday! GO BEARS! </p>
+<div ng-if="(itemValue('ntp_ntp_local_dateTime') | date:'EEEE') =='Sunday'">
+  	<p color=orange> Football Sunday! GO BEARS! </p>
 </div>
 
 
-<div ng-if="itemValue('ntp_ntp_local_dateTime') | date:'EEEE' | lowercase == 'wednesday'">
+<div ng-if="(itemValue('ntp_ntp_local_dateTime') | date:'EEEE') == 'Wednesday'">
   	<p> Hump Day! </p>
 </div>
 
-<div ng-if="itemValue('ntp_ntp_local_dateTime') | date:'EEEE' | lowercase == 'thursday'">
-  <div ng-if="itemValue('ntp_ntp_local_dateTime') | date:'hh' | number:0 < 17">
+<div ng-if="(itemValue('ntp_ntp_local_dateTime') | date:'EEEE') == 'Thursday'">
+  <div ng-if="(itemValue('ntp_ntp_local_dateTime') | date:'HH' | number:0) < 17">
   	<p> Almost weekend! </p>
   </div>
-  <div ng-if="itemValue('ntp_ntp_local_dateTime') | date:'hh', number:0 > 17">
+  <div ng-if="(itemValue('ntp_ntp_local_dateTime') | date:'HH', number:0) > 17">
   	<p> Don't forget to take out garbage! </p>
   </div>
 </div>
 
 
-<div ng-if="itemValue('ntp_ntp_local_dateTime') | date:'EEEE' | lowercase == 'friday'">
-  <div ng-if="itemValue('ntp_ntp_local_dateTime') | date:'hh' | number:0 < 6">
+<div ng-if="(itemValue('ntp_ntp_local_dateTime') | date:'EEEE') == 'Friday'">
+  <div ng-if="(itemValue('ntp_ntp_local_dateTime') | date:'HH' | number:0) < 6">
   	<p> Don't forget to take out garbage! </p>
   </div>
-  <div ng-if="itemValue('ntp_ntp_local_dateTime') | date:'hh', number:0 > 6">
+  <div ng-if="(itemValue('ntp_ntp_local_dateTime') | date:'HH', number:0) > 6">
   	<p> TGIF! Enjoy the weekend! </p>
   </div>
+</div>
+
+<div ng-if="(itemValue('ntp_ntp_local_dateTime') | date:'EEEE') =='Saturday'">
+  <div ng-if="(itemValue('ntp_ntp_local_dateTime') | date:'HH' | number:0) < 10">
+  	<div ng-if="(itemValue('ntp_ntp_local_dateTime') | date:'HH' | number:0) < 7">
+  
+      <p style="font-size:14px; color:#ff0000; font-weight:bold; font-style:italic;">
+  		GO TO SLEEP!!!
+  		<span style="color: #ff0000"></span>
+	  </p>
+ 
+    </div>
+    <div ng-if="(itemValue('ntp_ntp_local_dateTime') | date:'HH' | number:0) > 7">
+  	<p> Pancake time! </p>
+  </div>
+  </div>
+  <div ng-if="(itemValue('ntp_ntp_local_dateTime') | date:'HH' | number:0) > 10">
+  	<p> Don't forget your to say I LOVE YOU! </p>
+  </div>
+  	<p> Enjoy day off! </p>
 </div>
